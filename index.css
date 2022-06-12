@@ -523,6 +523,10 @@ body:not(.user-is-tabbing) a:focus {
     }
 }
 
+.iphonemockup {
+    width: 300px;
+}
+
 @media(max-width: 900px) {
     .work__code {
         height: 4rem;
