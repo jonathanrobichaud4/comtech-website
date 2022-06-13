@@ -421,7 +421,7 @@ body:not(.user-is-tabbing) a:focus {
 
 .third-image {
     background: linear-gradient(rgba(0,0,0, .1), rgba(0,0,0, .4)), 
-        url('./images/project-3.png');
+        url('./images/bird-telephoto.JPG');
 	z-index: -1;
 	opacity: 0;
     background-position: center;
