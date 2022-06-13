@@ -129,12 +129,6 @@ h3 {
     }
 }
 
-h1{
-    display: flex;
-    justify-content: flex-start;
-    /*padding: var(--gutter-normal) 0;*/
-}
-
 h2 {
     font-size: var(--font-size-large);
     margin-bottom: var(--gutter-medium);
@@ -304,7 +298,6 @@ body:not(.user-is-tabbing) a:focus {
 
 .nav__items {
     display: flex;
-    justify-content: flex-end;
     list-style: none;
 }
 
@@ -313,9 +306,14 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .nav__title {
+    color: var(--white-1);
+}
+
+.nav__subpage {
     display: flex;
-    justify-content: flex-start;
-    /*padding: var(--gutter-normal) 0;*/
+    justify-content: space-between;
+    padding: var(--gutter-normal) 0;
+    align-items: center
 }
 
 @media(max-width: 500px) {
