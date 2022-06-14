@@ -307,6 +307,7 @@ body:not(.user-is-tabbing) a:focus {
 
 .nav__title {
     color: var(--white-1);
+    text-decoration: none;
 }
 
 .nav__subpage {
