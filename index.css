@@ -184,69 +184,8 @@ a {
     outline: 2px solid transparent;
 }
 
-::-moz-focus-inner {
-    border: 0;
-}
-
-button:focus,
-a:focus {
-    outline: 2px solid var(--green);
-}
-
-body:not(.user-is-tabbing) button:focus,
-body:not(.user-is-tabbing) a:focus {
-    outline: none;
-}
-
 .link:hover {
     color: var(--green);
-}
-
-.btn {
-    position: relative;
-    display: inline-block;
-    padding: 1rem 4.2rem;
-    text-decoration: none;
-    color: inherit;
-    border: 1px solid  var(--green);
-    font-weight: 400;
-}
-
-.btn:focus {
-    outline: none;
-}
-
-.btn::after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 100%;
-    background: var(--white);
-    height: 100%;
-    z-index: -1;
-    transition: all 0.2s cubic-bezier(1, 0.68, 0.16, 0.9);
-}
-
-.btn:hover::after,
-.btn:focus::after {
-    right: 0;
-    background: var(--green);
-}
-
-.btn--green {
-    background: var(--green);
-    transition: all 0.2s;
-}
-
-.btn--green::after {
-    display: none;
-}
-
-.btn--green:hover,
-.btn--green:focus {
-    background: transparent;
 }
 
 .link__text {
@@ -308,6 +247,11 @@ body:not(.user-is-tabbing) a:focus {
 .nav__title {
     color: var(--white-1);
     text-decoration: none;
+}
+
+.nav__title:hover {
+    color: var(--green);
+    opacity: 0.8; 
 }
 
 .nav__subpage {
@@ -380,6 +324,33 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 
+.header__text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.header__text p {
+    margin: 1.5rem 0 3.5rem;
+    max-width: var(--container-medium-width);
+    font-family: 'SF Pro', sans-serif;
+    font-size: var(--font-size-medium);
+}
+
+@media(max-width: 500px) {
+    .header {
+        text-align: center;
+    }
+
+    .header__text p {
+        transform: scale(.8);
+    }
+}
+
+/* --------------------------------------- */
+/* ----- Background header image ----- */
+/* --------------------------------------- */
+
 .background-image {
 	background-position: center;
 	background-size: cover;
@@ -436,29 +407,6 @@ body:not(.user-is-tabbing) a:focus {
 
 .third-image.show {
 	opacity: 1;
-}
-
-.header__text {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.header__text p {
-    margin: 1.5rem 0 3.5rem;
-    max-width: var(--container-medium-width);
-    font-family: 'SF Pro', sans-serif;
-    font-size: var(--font-size-medium);
-}
-
-@media(max-width: 500px) {
-    .header {
-        text-align: center;
-    }
-
-    .header__text p {
-        transform: scale(.8);
-    }
 }
 
 /* --------------------------------------- */
@@ -530,6 +478,9 @@ body:not(.user-is-tabbing) a:focus {
 
 * {box-sizing:border-box}
 
+/* --------------------------------------- */
+/* ----- Slideshow ----- */
+/* --------------------------------------- */
 /* Slideshow container */
 .slideshow-container {
   max-width: 1000px;
