@@ -444,17 +444,6 @@ a {
     flex: 0 0 30%;
 }
 
-.work__code {
-    display: block;
-    height: 3rem;
-    margin-left: var(--gutter-normal);
-    transition: all .3s;
-}
-
-.work__code:hover {
-    transform: scale(1.2);
-}
-
 .work__image-box {
     margin-bottom: var(--gutter-normal);
 }
@@ -468,12 +457,6 @@ a {
 
 .iphonemockup {
     width: 300px;
-}
-
-@media(max-width: 900px) {
-    .work__code {
-        height: 4rem;
-    }
 }
 
 * {box-sizing:border-box}
