@@ -28,7 +28,6 @@
     --white: #f0e9f2;
     --white-1: #e5e5e6da;
 
-
     --container-max-width: 1180px;
     --container-normal-width: 800px;
     --container-medium-width: 700px; 
@@ -203,11 +202,10 @@ a {
     position: absolute;
     top: 0;
     left: 0;
-    right: 100%;
-    background: var(--white);
+    right: 0;
     height: 100%;
     z-index: -1;
-    transition: all 0.2s cubic-bezier(1, 0.68, 0.16, 0.9);
+    transition: all 0.2s ease-in-out;
 }
 
 .link__text:focus {
@@ -245,20 +243,45 @@ a {
 }
 
 .nav__title {
+    position: relative;
+    display: inline-block;
+    padding: 1rem 0;
+    text-decoration: none;
+    color: inherit;
+    transition: all .2s;
+}
+
+.nav__title__text {
     color: var(--white-1);
     text-decoration: none;
 }
 
+.nav__title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: inline-block;
+    height: 0%;
+    transition: all 0.2s ease-in-out;
+}
+
 .nav__title:hover {
     color: var(--green);
-    opacity: 0.8; 
+}
+
+.nav__title:hover::after {
+    right: 0;
+    height: 2px;
+    background: var(--green);
 }
 
 .nav__subpage {
     display: flex;
     justify-content: space-between;
     padding: var(--gutter-normal) 0;
-    align-items: center
+    align-items: center;
 }
 
 @media(max-width: 500px) {
@@ -293,11 +316,10 @@ a {
     position: absolute;
     bottom: 0;
     left: 0;
-    right: 100%;
+    right: 0;
     display: inline-block;
-    height: 1rem;
-    background: var(--white);
-    transition: all 0.25s cubic-bezier(1, 0.68, 0.16, 0.9);
+    height: 0%;
+    transition: all 0.2s ease-in-out;
 }
 
 .nav__link:hover {
@@ -426,7 +448,7 @@ a {
 }
 
 .work__box:not(:last-child) {
-    margin-bottom: 25rem;
+    margin-bottom: 20rem;
 }
 
 @media(max-width: 500px) {
@@ -469,6 +491,7 @@ a {
   max-width: 1000px;
   position: relative;
   margin: auto;
+  
 }
 
 /* Hide the images by default */
@@ -510,9 +533,8 @@ a {
   padding: 8px 12px;
   position: absolute;
   background-color: #222;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
+  bottom: 0px;
+  text-align: left;
 }
 
 /* Number text (1/3 etc) */
@@ -550,6 +572,14 @@ a {
 @keyframes fade {
   from {opacity: .4} 
   to {opacity: 1}
+}
+
+/* --------------------------------------- */
+/* ----- Project subpages ----- */
+/* --------------------------------------- */
+
+.project {
+    padding: var(--gutter-normal)
 }
 
 .project__content {
